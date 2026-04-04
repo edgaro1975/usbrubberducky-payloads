@@ -1,2 +1,7 @@
 # MacOS
 .DS_Store
+
+# Secrets
+.env
+claude-code-agents/.env
+claude-code-agents/data/
