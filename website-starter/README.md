@@ -12,8 +12,11 @@ pre-wired so you can start on the actual site instead of plumbing.
 | **React Router** | Multi-page routing with animated page transitions | https://reactrouter.com |
 | **Vite** + **React** | Fast dev server and build | https://vitejs.dev |
 
-See **[DESIGN_REFERENCE.md](./DESIGN_REFERENCE.md)** for landing-page layout and
-style patterns to build against.
+**Pre-branded for CMIT Solutions®** — the palette, Avenir/Arial fonts, logo,
+gradients, and messaging follow the official CMIT Brand Guide (v2.1). See
+**[CMIT_BRAND.md](./CMIT_BRAND.md)** for the full brand reference and an
+on-brand checklist. See **[DESIGN_REFERENCE.md](./DESIGN_REFERENCE.md)** for
+landing-page layout and motion patterns.
 
 ## What's included (live demos)
 

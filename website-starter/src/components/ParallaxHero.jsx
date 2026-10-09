@@ -47,39 +47,42 @@ export default function ParallaxHero() {
       ref={root}
       className="relative flex h-screen items-center justify-center overflow-hidden"
     >
-      {/* Parallax background layers */}
+      {/* Parallax background layers — CMIT palette (blue present + red accent) */}
       <div
         data-speed="slow"
-        className="pointer-events-none absolute -left-20 top-10 h-72 w-72 rounded-full bg-accent/30 blur-3xl"
+        className="pointer-events-none absolute -left-20 top-10 h-72 w-72 rounded-full bg-bright-blue/25 blur-3xl"
       />
       <div
         data-speed="mid"
-        className="pointer-events-none absolute right-0 top-40 h-96 w-96 rounded-full bg-accent2/30 blur-3xl"
+        className="pointer-events-none absolute right-0 top-40 h-96 w-96 rounded-full bg-royal-purple/20 blur-3xl"
       />
       <div
         data-speed="fast"
-        className="pointer-events-none absolute bottom-0 left-1/3 h-64 w-64 rounded-full bg-indigo-400/20 blur-3xl"
+        className="pointer-events-none absolute bottom-0 left-1/3 h-64 w-64 rounded-full bg-red/20 blur-3xl"
       />
 
       {/* Foreground content */}
       <div data-hero-content className="relative z-10 max-w-content px-6 text-center">
-        <p className="mb-5 inline-block rounded-full border border-white/10 px-4 py-1 text-sm text-muted">
-          GSAP · Lenis · ReactBits · Tailwind
+        {/* Pre-header: ALL CAPS, loose letter spacing (brand typography rule) */}
+        <p className="mb-5 text-sm uppercase tracking-[0.25em] text-light-blue">
+          Your Technology Team
         </p>
+        {/* 3+ word header → sentence case, not black weight (brand rule) */}
         <SplitText
-          text="Design-grade websites, fast"
-          className="text-5xl font-extrabold leading-[1.05] tracking-tight sm:text-7xl"
+          text="Enterprise-class IT for everyone"
+          className="text-5xl font-semibold leading-[1.08] tracking-tight sm:text-7xl"
         />
-        <p className="mx-auto mt-6 max-w-xl text-lg text-muted">
-          A pre-wired foundation for building animated landing pages — smooth
-          scroll, scroll-synced motion, routing, and page transitions included.
+        <p className="mx-auto mt-6 max-w-2xl text-lg text-light-blue">
+          Locally-owned, nationally-supported IT and cybersecurity that
+          proactively protects your growing business and helps you outpace the
+          competition.
         </p>
         <div className="mt-8 flex items-center justify-center gap-4">
-          <a className="rounded-full bg-fg px-6 py-3 font-medium text-bg transition-transform hover:scale-105" href="#work">
-            See it in action
+          <a className="rounded-full bg-red px-6 py-3 font-medium text-white transition-transform hover:scale-105" href="#work">
+            Get a consultation
           </a>
-          <a className="rounded-full border border-white/15 px-6 py-3 font-medium transition-colors hover:bg-white/5" href="#">
-            Docs
+          <a className="rounded-full border border-white/20 px-6 py-3 font-medium transition-colors hover:bg-white/5" href="#work">
+            Explore services
           </a>
         </div>
       </div>

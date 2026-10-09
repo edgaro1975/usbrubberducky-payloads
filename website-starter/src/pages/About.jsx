@@ -21,21 +21,36 @@ export default function About() {
 
   return (
     <section ref={ref} className="mx-auto flex min-h-screen max-w-content flex-col justify-center px-6 py-32">
-      <SplitText as="h1" text="About this starter" className="text-5xl font-extrabold tracking-tight sm:text-6xl" />
-      <div className="mt-8 max-w-2xl space-y-4 text-lg text-muted">
+      <p className="about-line text-sm uppercase tracking-[0.25em] text-light-blue">
+        About CMIT Solutions®
+      </p>
+      <SplitText as="h1" text="Local owners, national strength" className="mt-3 text-5xl font-semibold tracking-tight sm:text-6xl" />
+      <div className="mt-8 max-w-2xl space-y-4 text-lg text-light-blue">
         <p className="about-line">
-          This is a second route — notice the wipe transition when you navigated
-          here, and that smooth scroll still works.
+          CMIT Solutions delivers locally-owned, nationally-supported
+          enterprise-class IT solutions to proactively protect your growing
+          business and help you outpace the competition.
         </p>
         <p className="about-line">
-          Each page runs its own entrance animation on mount. Build your real
-          pages the same way: drop sections in, animate with GSAP, and let the
-          shared layout handle scroll and transitions.
+          Your local CMIT professional understands your unique business needs
+          and guides you toward the right technology for growth — backed by a
+          national network of IT experts.
         </p>
-        <p className="about-line">
-          Swap in components from ReactBits whenever you want a ready-made
-          animated element.
-        </p>
+      </div>
+      {/* CRISP brand values */}
+      <div className="about-line mt-10 grid max-w-3xl gap-4 sm:grid-cols-5">
+        {[
+          ['C', 'Community & Collaboration'],
+          ['R', 'Respect & Selflessness'],
+          ['I', 'Integrity & Honesty'],
+          ['S', 'Service Excellence'],
+          ['P', 'Passion & Enthusiasm'],
+        ].map(([letter, label]) => (
+          <div key={letter} className="rounded-xl border border-white/10 bg-surface p-4">
+            <div className="text-2xl font-black text-red">{letter}</div>
+            <div className="mt-1 text-sm text-light-blue">{label}</div>
+          </div>
+        ))}
       </div>
     </section>
   )

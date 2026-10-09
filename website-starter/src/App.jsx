@@ -1,6 +1,7 @@
 import { Routes, Route } from 'react-router-dom'
 import { useSmoothScroll } from './hooks/useSmoothScroll'
 import Nav from './components/Nav'
+import Footer from './components/Footer'
 import PageTransition from './components/PageTransition'
 import Home from './pages/Home'
 import About from './pages/About'
@@ -17,6 +18,7 @@ export default function App() {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
       </Routes>
+      <Footer />
     </>
   )
 }

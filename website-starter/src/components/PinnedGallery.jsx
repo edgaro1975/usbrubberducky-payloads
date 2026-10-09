@@ -5,10 +5,11 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger'
 gsap.registerPlugin(ScrollTrigger)
 
 const CARDS = [
-  { title: 'Hero', body: 'Layered parallax with scroll-synced depth.', tag: '01' },
-  { title: 'Pin', body: 'This section is pinned while the track scrolls sideways.', tag: '02' },
-  { title: 'Reveal', body: 'Text and images animate in as they enter the viewport.', tag: '03' },
-  { title: 'Transition', body: 'A wipe overlay plays between routes.', tag: '04' },
+  { title: 'Managed IT services', body: 'Proactive monitoring, support, and management of your entire IT environment.', tag: '01' },
+  { title: 'Cybersecurity', body: 'Multi-layered protection to keep your data, people, and business safe.', tag: '02' },
+  { title: 'Cloud services', body: 'Secure cloud migration, hosting, and productivity tools that scale with you.', tag: '03' },
+  { title: 'Data backup & recovery', body: 'Business continuity so you bounce back fast from any disruption.', tag: '04' },
+  { title: 'Compliance', body: 'Meet industry and regulatory requirements with expert guidance.', tag: '05' },
 ]
 
 /**
@@ -64,20 +65,20 @@ export default function PinnedGallery() {
     <section id="work" ref={root} className="relative h-screen overflow-hidden">
       <div ref={track} className="flex h-full w-max items-center gap-8 px-[10vw]">
         <div className="panel-card flex h-full shrink-0 items-center">
-          <h2 className="max-w-sm text-4xl font-bold leading-tight sm:text-5xl">
-            Pinned horizontal scroll
-            <span className="mt-3 block text-lg font-normal text-muted">
-              Scroll down — the section pins and these panels move sideways.
+          <h2 className="max-w-sm text-4xl font-semibold leading-tight sm:text-5xl">
+            What we do for you
+            <span className="mt-3 block text-lg font-normal text-light-blue">
+              Keep scrolling — the section pins while our services move past.
             </span>
           </h2>
         </div>
         {CARDS.map((c) => (
           <div key={c.tag} className="panel-card flex h-full shrink-0 items-center">
             <div className="panel-inner flex h-[60vh] w-[70vw] max-w-md flex-col justify-between rounded-3xl border border-white/10 bg-surface p-8 sm:w-[32vw]">
-              <span className="text-sm text-muted">{c.tag}</span>
+              <span className="font-semibold text-red">{c.tag}</span>
               <div>
                 <h3 className="text-3xl font-semibold">{c.title}</h3>
-                <p className="mt-2 text-muted">{c.body}</p>
+                <p className="mt-2 text-light-blue">{c.body}</p>
               </div>
             </div>
           </div>
