@@ -1,96 +1,34 @@
-:root {
-  --bg: #0b0b0f;
-  --fg: #f4f4f5;
-  --muted: #a1a1aa;
-  --accent: #6366f1;
-  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html, body {
+    margin: 0;
+    padding: 0;
+  }
+  body {
+    @apply bg-bg text-fg font-sans antialiased;
+  }
 }
 
-* { box-sizing: border-box; }
+@layer components {
+  /* Lenis recommended styles — keep these for smooth scroll to behave */
+  html.lenis,
+  html.lenis body {
+    height: auto;
+  }
+  .lenis.lenis-smooth {
+    scroll-behavior: auto !important;
+  }
 
-html, body { margin: 0; padding: 0; }
-
-body {
-  background: var(--bg);
-  color: var(--fg);
-  -webkit-font-smoothing: antialiased;
+  /* SplitText mechanics: each word sits in a clipping wrapper so it slides up */
+  .split-word-wrap {
+    display: inline-block;
+    overflow: hidden;
+    vertical-align: top;
+  }
+  .split-word {
+    display: inline-block;
+  }
 }
-
-/* Lenis recommended styles */
-html.lenis, html.lenis body { height: auto; }
-.lenis.lenis-smooth { scroll-behavior: auto !important; }
-
-main { width: 100%; }
-
-section {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: 2rem clamp(1rem, 5vw, 6rem);
-  gap: 1rem;
-}
-
-.hero h1 {
-  font-size: clamp(2.5rem, 9vw, 7rem);
-  line-height: 1.05;
-  margin: 0;
-  font-weight: 800;
-  letter-spacing: -0.03em;
-}
-
-.h2 {
-  font-size: clamp(1.8rem, 5vw, 3.5rem);
-  margin: 0;
-  font-weight: 700;
-  letter-spacing: -0.02em;
-}
-
-.subtitle {
-  color: var(--muted);
-  font-size: clamp(1rem, 2.2vw, 1.4rem);
-  max-width: 40ch;
-}
-
-.body {
-  color: var(--muted);
-  max-width: 48ch;
-  font-size: 1.1rem;
-  line-height: 1.6;
-}
-
-code {
-  background: rgba(255, 255, 255, 0.08);
-  padding: 0.1em 0.4em;
-  border-radius: 4px;
-  font-size: 0.9em;
-}
-
-.scroll-hint {
-  margin-top: 2rem;
-  color: var(--muted);
-  font-size: 0.9rem;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-}
-
-.panel.alt { background: #111118; }
-
-.box {
-  width: 140px;
-  height: 140px;
-  border-radius: 20px;
-  background: linear-gradient(135deg, var(--accent), #a855f7);
-  margin-bottom: 2rem;
-  box-shadow: 0 20px 60px rgba(99, 102, 241, 0.35);
-}
-
-/* SplitText mechanics: each word sits in a clipping wrapper so it can slide up */
-.split-word-wrap {
-  display: inline-block;
-  overflow: hidden;
-  vertical-align: top;
-}
-.split-word { display: inline-block; }

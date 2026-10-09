@@ -8,7 +8,21 @@ pre-wired so you can start on the actual site instead of plumbing.
 | **GSAP** + ScrollTrigger | The animation engine — timelines, tweens, scroll-triggered motion | https://gsap.com |
 | **Lenis** | Smooth, inertial scrolling | https://lenis.dev |
 | **ReactBits** | Copy-paste animated React components | https://reactbits.dev |
+| **Tailwind CSS** | Utility-first styling; theme tokens in `tailwind.config.js` | https://tailwindcss.com |
+| **React Router** | Multi-page routing with animated page transitions | https://reactrouter.com |
 | **Vite** + **React** | Fast dev server and build | https://vitejs.dev |
+
+See **[DESIGN_REFERENCE.md](./DESIGN_REFERENCE.md)** for landing-page layout and
+style patterns to build against.
+
+## What's included (live demos)
+
+- **Parallax hero** (`src/components/ParallaxHero.jsx`) — layered depth on scroll.
+- **Pinned horizontal gallery** (`src/components/PinnedGallery.jsx`) — a section
+  that pins while panels scroll sideways.
+- **Page transitions** (`src/components/PageTransition.jsx`) — a wipe between
+  routes; navigate Home ↔ About to see it.
+- **Scroll reveals** (`src/components/SplitText.jsx`) + staggered feature cards.
 
 ## Getting started
 
@@ -26,10 +40,11 @@ npm run preview  # preview the production build locally
   ScrollTrigger so the two share one clock. Call `useSmoothScroll()` once near
   the root of your app (already done in `src/App.jsx`). This is the part people
   usually get wrong — it's done for you here.
-- **`src/App.jsx`** — the demo page. Shows a scroll-scrubbed GSAP animation and
-  the text-reveal component. Replace its contents with your own sections.
-- **`src/components/SplitText.jsx`** — an example animated component in the
-  ReactBits style: small, self-contained, and yours to edit.
+- **`src/App.jsx`** — the layout: nav, page-transition overlay, and the routes.
+- **`src/pages/`** — `Home.jsx` and `About.jsx`. Each page runs its own
+  entrance animation on mount; add your own pages here and list them in `App.jsx`.
+- **`src/components/`** — reusable animated pieces (hero, pinned gallery, nav,
+  transition, split text). Edit freely or replace with ReactBits components.
 
 ## Adding ReactBits components
 
